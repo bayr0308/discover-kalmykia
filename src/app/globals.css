@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ground: #141817;
+  --color-surface: #1e2421;
+  --color-ink: #ffffff;
+  --color-muted: #cdd2ce;
+  --color-button-ink: #171b19;
+  --color-scrim: #00000099;
+  --spacing-page: clamp(24px, 3.12vw, 64px);
+  --text-small: 14px;
+  --text-body: 18px;
+  --text-lead: clamp(24px, 2.1vw, 30px);
+  --text-heading: clamp(36px, 4.25vw, 72px);
+  --text-display: clamp(72px, 7.7vw, 128px);
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --breakpoint-wide: 112.5rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-manrope), sans-serif;
+}
+
+@layer base {
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-ground);
+  }
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: default;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 7px;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 500;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* Global accessibility preferences also apply to Base UI portals. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+html:has([data-motion="off"]) {
+  scroll-behavior: auto !important;
+}
+html:has([data-motion="off"]) *,
+html:has([data-motion="off"]) *::before,
+html:has([data-motion="off"]) *::after {
+  transition: none !important;
+}
