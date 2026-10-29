@@ -1,9 +1,11 @@
+import { assetPath } from "./paths";
+
 export const places = [
   {
     id: "elista",
     title: "Элиста и хурулы",
     subtitle: "Тишина, которую хочется увезти с собой",
-    image: "/images/khurul.webp",
+    image: assetPath("/images/khurul.webp"),
     alt: "Хурул в тёплом вечернем свете — художественная визуализация",
     description:
       "Начните с Золотой обители Будды Шакьямуни. Пройдите по храмовому двору, загляните в музей буддизма и оставьте время на неспешную прогулку по Элисте.",
@@ -17,7 +19,7 @@ export const places = [
     id: "steppe",
     title: "Дикая степь",
     subtitle: "В гостях у ветра и сайгаков",
-    image: "/images/saiga.webp",
+    image: assetPath("/images/saiga.webp"),
     alt: "Сайгаки среди степных трав — художественная визуализация",
     description:
       "В заповеднике «Чёрные земли» степь живёт в своём ритме. Здесь можно отправиться по экологическому маршруту и наблюдать за сайгаками в их естественной среде.",
@@ -35,7 +37,7 @@ export const seasons = [
     label: "Весна",
     title: "За цветущей степью",
     period: "Апрель и май",
-    image: "/images/hero-tulips.webp",
+    image: assetPath("/images/hero-tulips.webp"),
     alt: "Дикие тюльпаны в степи",
     intro:
       "Самое короткое и яркое свидание со степью. Планируйте поездку гибко: сроки цветения каждый год зависят от погоды.",
@@ -53,7 +55,7 @@ export const seasons = [
     label: "Лето",
     title: "За длинным закатом",
     period: "Июнь — август",
-    image: "/images/saiga.webp",
+    image: assetPath("/images/saiga.webp"),
     alt: "Сайгаки в вечернем свете",
     intro:
       "Ранние выезды, большие расстояния и тёплые вечера. В середине дня лучше остаться в городе и дать жаре пройти.",
@@ -74,7 +76,7 @@ export const seasons = [
     label: "Осень",
     title: "За золотым светом",
     period: "Сентябрь и октябрь",
-    image: "/images/khurul.webp",
+    image: assetPath("/images/khurul.webp"),
     alt: "Буддийский храм на закате",
     intro:
       "Когда жара уходит, остаётся мягкий свет. Хорошее время соединить городские прогулки, знакомство с культурой и выезд на природу.",
@@ -92,7 +94,7 @@ export const seasons = [
     label: "Зима",
     title: "За теплом традиций",
     period: "Декабрь — февраль",
-    image: "/images/tea.webp",
+    image: assetPath("/images/tea.webp"),
     alt: "Пиала калмыцкого чая и борцоки",
     intro:
       "Зимой путешествие становится камерным: больше разговоров, музейных открытий и чашек горячего калмыцкого чая.",

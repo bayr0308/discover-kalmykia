@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
+  output: "export",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  trailingSlash: true,
   reactStrictMode: true,
   devIndicators: false,
-  images: { qualities: [75, 90] },
+  images: { unoptimized: true },
 };
 export default nextConfig;

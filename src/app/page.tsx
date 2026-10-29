@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Navigation, Places, SeasonPlanner, TravelQuestions } from "@/components/experience";
 import { MotionShell } from "@/components/motion-shell";
+import { assetPath } from "@/lib/paths";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
             <Image
               data-hero-image
               className="object-cover object-[64%_center] md:object-center"
-              src="/images/hero-tulips.webp"
+              src={assetPath("/images/hero-tulips.webp")}
               alt="Тюльпанная степь под огромным вечерним небом"
               fill
               preload
@@ -107,7 +108,7 @@ export default function Home() {
           >
             <Image
               className="object-cover"
-              src="/images/tea.webp"
+              src={assetPath("/images/tea.webp")}
               alt="Калмыцкий молочный чай в пиале и золотистые борцоки"
               fill
               sizes="(max-width: 767px) 100vw, 55vw"
